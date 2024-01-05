@@ -48,7 +48,8 @@
     "docker:db:reset": "docker-compose down && docker volume prune -f",
     "docker:apm": "COMPOSE_PROJECT_NAME=stelace_monitoring docker-compose -f docker-compose.monitoring.yml",
     "release": "standard-version",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "setup": "yarn install && yarn plugins && yarn knex migrate:latest && yarn seed"
   },
   "dependencies": {
     "@elastic/elasticsearch": "^7.13.0",
