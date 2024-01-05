@@ -1,5 +1,5 @@
 require('dotenv').config()
-require('../api/secure-env').config()
+require('../secure-env').config()
 
 const { start: startApm } = require('./apm')
 

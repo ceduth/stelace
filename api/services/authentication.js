@@ -4,7 +4,7 @@ const _ = require('lodash')
 const { transaction } = require('objection')
 const bluebird = require('bluebird')
 
-const { logError } = require('../../server/logger')
+const { logError } = require('../server/logger')
 const { getModels } = require('../models')
 
 const { getPlatformEnvData, setPlatformEnvData } = require('../redis')

@@ -198,7 +198,7 @@ function after () {
 }
 
 async function createServer ({ enableSignal, useFreePort = true }) {
-  const { start } = require('../server')
+  const { start } = require('../api/server')
 
   const server = await start({
     useFreePort,
@@ -217,7 +217,7 @@ async function createServer ({ enableSignal, useFreePort = true }) {
 }
 
 async function stopServer (server) {
-  const { stop } = require('../server')
+  const { stop } = require('../api/server')
 
   await stop({ server })
 }

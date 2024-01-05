@@ -6,7 +6,7 @@ const crypto = require('crypto')
 
 const { parseKey } = require('stelace-util-keys')
 
-const { logError } = require('../server/logger')
+const { logError } = require('./server/logger')
 
 const Base = require('./models/Base')
 

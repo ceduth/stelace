@@ -4,7 +4,7 @@ const redis = require('./api/redis')
 const roles = require('./api/roles')
 const versions = require('./api/versions')
 
-const logger = require('./server/logger')
+const logger = require('./api/server/logger')
 const testTools = require('./test')
 const utils = {
   authentication: require('./api/util/authentication'),

@@ -7,7 +7,7 @@ const request = require('superagent')
 const apm = require('elastic-apm-node')
 
 const { getLocalInstanceKey } = require('../auth')
-const { logError } = require('../../server/logger')
+const { logError } = require('../server/logger')
 const { getModels, getModelInfo } = require('../models')
 
 const { isValidObjectId } = require('../util/validation')
