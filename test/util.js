@@ -1,6 +1,6 @@
-const { computeDate } = require('../src/util/time')
-const { getModels } = require('../src/models')
-const { roundDecimal } = require('../src/util/math')
+const { computeDate } = require('../api/util/time')
+const { getModels } = require('../api/models')
+const { roundDecimal } = require('../api/util/math')
 const WebhookManager = require('./webhook-manager')
 const _ = require('lodash')
 

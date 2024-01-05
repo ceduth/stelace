@@ -7,7 +7,7 @@ const {
   isValidCustomDurationConfig,
   getDurationPrice,
   getPriceAfterFees
-} = require('../../../src/util/pricing')
+} = require('../../../api/util/pricing')
 
 test('rounds price to cents', (t) => {
   const tests = [

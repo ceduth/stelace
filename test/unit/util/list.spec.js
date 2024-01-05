@@ -4,7 +4,7 @@ const test = require('ava')
 
 const {
   replaceBy
-} = require('../../../src/util/list')
+} = require('../../../api/util/list')
 
 test('replaces the right element', (t) => {
   const elements = [

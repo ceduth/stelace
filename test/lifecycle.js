@@ -1,5 +1,5 @@
 require('dotenv').config()
-require('../src/secure-env').config()
+require('../api/secure-env').config()
 
 process.env.ELASTIC_APM_DISABLED = true
 

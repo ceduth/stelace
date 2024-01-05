@@ -1,7 +1,7 @@
 const test = require('ava')
 const _ = require('lodash')
 
-const { findDeepKey, allDeepKeys } = require('../../../src/util/deepKeys')
+const { findDeepKey, allDeepKeys } = require('../../../api/util/deepKeys')
 
 test('findDeepKey returns object itself when having key at root', async (t) => {
   const obj = { key: true }

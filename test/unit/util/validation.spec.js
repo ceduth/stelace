@@ -5,7 +5,7 @@ const Uuid = require('uuid')
 const {
   isUUIDV4,
   isValidObjectId
-} = require('../../../src/util/validation')
+} = require('../../../api/util/validation')
 
 const {
   getRandomString,

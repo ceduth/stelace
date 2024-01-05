@@ -4,7 +4,7 @@ const test = require('ava')
 
 const {
   Role
-} = require('../../../src/models')
+} = require('../../../api/models')
 
 test('get namespaces recursively', (t) => {
   const roles = [

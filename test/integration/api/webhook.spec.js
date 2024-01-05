@@ -13,7 +13,7 @@ let userApp
 const { before, beforeEach, after } = require('../../lifecycle')
 const { getAccessTokenHeaders } = require('../../auth')
 const { testEventDelay } = require('../../util')
-const { apiVersions } = require('../../../src/versions')
+const { apiVersions } = require('../../../api/versions')
 
 let userWebhookUrl
 

@@ -12,12 +12,12 @@ const userServerCalls = {}
 const userServerCallsHeaders = {}
 let userApp
 
-const { apiVersions } = require('../../../src/versions')
+const { apiVersions } = require('../../../api/versions')
 const { before, beforeEach, after } = require('../../lifecycle')
 const { getAccessTokenHeaders } = require('../../auth')
 const { getObjectEvent, testEventMetadata } = require('../../util')
 
-const { encodeBase64 } = require('../../../src/util/encoding')
+const { encodeBase64 } = require('../../../api/util/encoding')
 
 let userWebhookUrl
 /* eslint-disable no-template-curly-in-string */

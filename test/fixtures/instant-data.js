@@ -1,7 +1,7 @@
 // const { computeDate } = require('../util')
 const { createModel } = require('./factory')
 
-const roles = require('../../src/roles')
+const roles = require('../../api/roles')
 
 const now = new Date().toISOString()
 

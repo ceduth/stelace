@@ -2,8 +2,8 @@ const path = require('path')
 const SqlFixtures = require('sql-fixtures')
 const Knex = require('knex')
 
-const { createSchema, dropSchema } = require('../src/database')
-const { getModels } = require('../src/models')
+const { createSchema, dropSchema } = require('../api/database')
+const { getModels } = require('../api/models')
 
 function getKnex (connection) {
   const options = {

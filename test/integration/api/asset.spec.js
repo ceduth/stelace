@@ -5,7 +5,7 @@ const request = require('supertest')
 
 const { before, beforeEach, after } = require('../../lifecycle')
 const { getAccessTokenHeaders } = require('../../auth')
-const { getModels } = require('../../../src/models')
+const { getModels } = require('../../../api/models')
 const {
   getObjectEvent,
   testEventMetadata,

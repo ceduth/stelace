@@ -6,8 +6,8 @@ const IntlMessageFormat = require('intl-messageformat')
 const momentTimezone = require('moment-timezone')
 const memoizeIntlConstructor = require('intl-format-cache').default
 
-const { isDateString } = require('../../../src/util/time')
-const { getCurrencyDecimal } = require('../../../src/util/currency')
+const { isDateString } = require('../../../api/util/time')
+const { getCurrencyDecimal } = require('../../../api/util/currency')
 
 function formatMessages (messages, values, { locale, currency, timezone }) {
   const transformedValues = transformValues(values)

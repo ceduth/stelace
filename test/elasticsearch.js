@@ -1,6 +1,6 @@
-const { isIndexExisting, createIndex, getClient, getIndex, isReady } = require('../src/elasticsearch')
+const { isIndexExisting, createIndex, getClient, getIndex, isReady } = require('../api/elasticsearch')
 
-const { getModels } = require('../src/models')
+const { getModels } = require('../api/models')
 
 async function init ({ platformId, env }) {
   const exists = await isIndexExisting({ platformId, env })

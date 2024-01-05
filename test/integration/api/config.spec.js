@@ -3,7 +3,7 @@ require('dotenv').config()
 const test = require('ava')
 const request = require('supertest')
 
-const { apiVersions } = require('../../../src/versions')
+const { apiVersions } = require('../../../api/versions')
 
 const { before, beforeEach, after } = require('../../lifecycle')
 const { getAccessTokenHeaders, getSystemKey } = require('../../auth')

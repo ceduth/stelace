@@ -11,7 +11,7 @@ const puppeteer = require('puppeteer-core')
 const { before, beforeEach, after } = require('../../lifecycle')
 const { getAccessTokenHeaders, refreshAccessToken, getSystemKey, getAccessToken } = require('../../auth')
 const { getObjectEvent, testEventMetadata } = require('../../util')
-const { encodeBase64 } = require('../../../src/util/encoding')
+const { encodeBase64 } = require('../../../api/util/encoding')
 
 const createOidcServer = require('../../../test/oauth/server')
 

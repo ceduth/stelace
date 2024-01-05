@@ -9,15 +9,15 @@ const factory = require('../test/fixtures/factory')
 const fixtures = require('../test/fixtures')
 const connection = require('../test/connection')
 
-const permissions = require('../src/permissions')
-const redis = require('../src/redis')
-const roles = require('../src/roles')
-const versions = require('../src/versions')
+const permissions = require('../api/permissions')
+const redis = require('../api/redis')
+const roles = require('../api/roles')
+const versions = require('../api/versions')
 
-const time = require('../src/util/time')
-const encoding = require('../src/util/encoding')
-const validation = require('../src/util/validation')
-const math = require('../src/util/math')
+const time = require('../api/util/time')
+const encoding = require('../api/util/encoding')
+const validation = require('../api/util/validation')
+const math = require('../api/util/math')
 
 module.exports = {
   permissions,

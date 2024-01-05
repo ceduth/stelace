@@ -9,7 +9,7 @@ const { before, beforeEach, after } = require('../../lifecycle')
 const { getAccessTokenHeaders, defaultUserId } = require('../../auth')
 const { getObjectEvent, testEventMetadata } = require('../../util')
 
-const { encodeBase64 } = require('../../../src/util/encoding')
+const { encodeBase64 } = require('../../../api/util/encoding')
 
 test.before(async t => {
   await before({ name: 'user' })(t)

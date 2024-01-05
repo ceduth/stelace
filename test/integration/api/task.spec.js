@@ -8,8 +8,8 @@ const { before, beforeEach, after } = require('../../lifecycle')
 const { getAccessTokenHeaders, getApiKey } = require('../../auth')
 const { computeDate } = require('../../util')
 
-const { getRoundedDate } = require('../../../src/util/time')
-const { encodeBase64 } = require('../../../src/util/encoding')
+const { getRoundedDate } = require('../../../api/util/time')
+const { encodeBase64 } = require('../../../api/util/encoding')
 
 test.before(async t => {
   // disable signal because there is time manipulation in this test suite

@@ -5,7 +5,7 @@ const request = require('supertest')
 
 const { before, beforeEach, after } = require('../../lifecycle')
 const { getSystemKey } = require('../../auth')
-const { getEnvironments } = require('../../../src/util/environment')
+const { getEnvironments } = require('../../../api/util/environment')
 const { getPostgresqlConnection, getElasticsearchConnection } = require('../../connection')
 
 const instanceEnv = getEnvironments()[0] || 'test'

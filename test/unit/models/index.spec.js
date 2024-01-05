@@ -6,7 +6,7 @@ const {
   getModelInfo,
   User,
   Asset
-} = require('../../../src/models')
+} = require('../../../api/models')
 
 test('get model info', (t) => {
   const info = getModelInfo({ objectId: 'org_xC3ZlGs1Jo71gb2G0Jo7' })

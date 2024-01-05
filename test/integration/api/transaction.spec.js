@@ -7,7 +7,7 @@ const _ = require('lodash')
 const { before, beforeEach, after } = require('../../lifecycle')
 const { getAccessTokenHeaders } = require('../../auth')
 
-const { getModels } = require('../../../src/models')
+const { getModels } = require('../../../api/models')
 const { computeDate } = require('../../util')
 const { getObjectEvent, testEventMetadata } = require('../../util')
 

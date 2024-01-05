@@ -4,7 +4,7 @@ const test = require('ava')
 
 const {
   CustomAttribute
-} = require('../../../src/models')
+} = require('../../../api/models')
 
 test('check if the object is enforced by the associated custom attributes', (t) => {
   const customAttributes = [

@@ -2,7 +2,7 @@ require('dotenv').config()
 
 const test = require('ava')
 
-const Base = require('../../../src/models/Base')
+const Base = require('../../../api/models/Base')
 
 class CustomModel extends Base {
   static getAccessFields (access) {

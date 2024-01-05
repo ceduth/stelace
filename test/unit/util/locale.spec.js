@@ -2,7 +2,7 @@ require('dotenv').config()
 
 const test = require('ava')
 
-const { parseLocale } = require('../../../src/util/locale')
+const { parseLocale } = require('../../../api/util/locale')
 
 test('parses the locale', (t) => {
   t.deepEqual(parseLocale('fr'), {

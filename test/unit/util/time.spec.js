@@ -12,7 +12,7 @@ const {
   isValidTimezone,
   computeRecurringDates,
   computeRecurringPeriods
-} = require('../../../src/util/time')
+} = require('../../../api/util/time')
 
 test('detects period intersections', (t) => {
   const dates1 = [

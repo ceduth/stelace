@@ -8,7 +8,7 @@ const {
 
   getInternalAvailabilityPeriods,
   getAvailabilityPeriods
-} = require('../../../src/util/availability')
+} = require('../../../api/util/availability')
 
 test('returns no dates if there is no transactions or availabilities', (t) => {
   const transactions = []

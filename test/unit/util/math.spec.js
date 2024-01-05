@@ -4,7 +4,7 @@ const test = require('ava')
 
 const {
   roundDecimal
-} = require('../../../src/util/math')
+} = require('../../../api/util/math')
 
 test('rounds number with precision', (t) => {
   t.is(roundDecimal(8.325, 2), 8.33)

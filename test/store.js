@@ -1,7 +1,7 @@
 const {
   getRedisClient,
   setPlatformId
-} = require('../src/redis')
+} = require('../api/redis')
 
 async function reset () {
   const client = getRedisClient()
