@@ -49,7 +49,7 @@
     "docker:apm": "COMPOSE_PROJECT_NAME=stelace_monitoring docker-compose -f docker-compose.monitoring.yml",
     "release": "standard-version",
     "prepare": "husky install",
-    "setup": "yarn install && yarn plugins && yarn knex migrate:latest && yarn seed"
+    "build": "ncc build api/server/start.js -o dist"
   },
   "dependencies": {
     "@elastic/elasticsearch": "^7.13.0",
