@@ -100,26 +100,29 @@ async function getConnection ({ platformId, env } = {}) {
       throw createError(500, 'PostgreSQL missing environment variables', { platformId, env })
     }
 
+    const ssl = PROD ? { rejectUnauthorized: false } : false;
     connection = {
+      connectionString: postgresqlData.POSTGRES_URL,
       host: postgresqlData.host,
       user: postgresqlData.user,
       password: postgresqlData.password,
       database: postgresqlData.database,
       port: postgresqlData.port,
       schema: postgresqlData.schema,
-      ssl: PROD ? { rejectUnauthorized: false } : false,
+      ssl
     }
     schema = postgresqlData.schema
+
   } else {
     connection = {
+      connectionString: process.env.POSTGRES_URL,
       host: process.env.POSTGRES_HOST,
       user: process.env.POSTGRES_USER,
       password: process.env.POSTGRES_PASSWORD,
       database: process.env.POSTGRES_DB,
       port: process.env.POSTGRES_PORT,
       schema: 'public',
-      ssl: PROD ? { rejectUnauthorized: false } : false,
-
+      ssl
     }
     schema = 'public'
   }
