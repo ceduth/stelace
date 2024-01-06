@@ -1,6 +1,5 @@
 const Knex = require('knex')
 
-const PROD = process.env.NODE_ENV === 'production'
 
 const knexInstances = {}
 

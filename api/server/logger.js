@@ -13,7 +13,6 @@ if (process.env.INSTANCE_ID) {
 
 const RoarrLogger = log.child(params)
 
-// const PROD = process.env.NODE_ENV === 'production'
 
 /**
  * This function is only used to log metrics in server.js

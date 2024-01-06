@@ -2,7 +2,6 @@
 
 const { serializeError } = require('serialize-error')
 
-const PROD = process.env.NODE_ENV === 'production'
 
 function initErrors () {
   if (!('toJSON' in Error.prototype)) {
