@@ -31,7 +31,7 @@ function getKnex (connection = {}, options = {}) {
       password,
       database,
       port,
-      ssl: PROD ? 'prefer' : false,
+      ssl: PROD ? { rejectUnauthorized: false } : false,
     },
     pool
   })

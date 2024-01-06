@@ -470,6 +470,7 @@ function start ({ communication }) {
 }
 
 async function migrateDatabase ({ platformId, env }) {
+
   const { connection, schema } = await getConnection({ platformId, env })
 
   const knex = await createSchema({ connection, schema, destroyKnex: false })

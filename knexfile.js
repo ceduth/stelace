@@ -1,6 +1,7 @@
 require('dotenv').config()
 const PROD = process.env.NODE_ENV === 'production'
 
+console.log('XXXXXXXXXXXXXXXXXXXXXXX PROD is', PROD)
 module.exports = {
 
   client: 'pg',
@@ -10,7 +11,7 @@ module.exports = {
     user: process.env.POSTGRES_USER,
     password: process.env.POSTGRES_PASSWORD,
     port: process.env.POSTGRES_PORT,
-    ssl: PROD ? 'prefer' : false,
+    ssl: PROD ? { rejectUnauthorized: false } : false,
   },
   migrations: {
     tableName: 'knex_migrations'

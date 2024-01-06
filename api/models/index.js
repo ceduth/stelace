@@ -107,7 +107,7 @@ async function getConnection ({ platformId, env } = {}) {
       database: postgresqlData.database,
       port: postgresqlData.port,
       schema: postgresqlData.schema,
-      ssl: PROD ? 'prefer' : false,
+      ssl: PROD ? { rejectUnauthorized: false } : false,
     }
     schema = postgresqlData.schema
   } else {
@@ -118,7 +118,7 @@ async function getConnection ({ platformId, env } = {}) {
       database: process.env.POSTGRES_DB,
       port: process.env.POSTGRES_PORT,
       schema: 'public',
-      ssl: PROD ? 'prefer' : false,
+      ssl: PROD ? { rejectUnauthorized: false } : false,
 
     }
     schema = 'public'

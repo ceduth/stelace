@@ -18,6 +18,7 @@ function getKnex (connection) {
 }
 
 async function init ({ connection }) {
+
   const { schema } = connection
 
   await createSchema({ connection: connection, schema })
@@ -58,6 +59,7 @@ async function syncInternalAvailability (platformId, env) {
 }
 
 async function reset ({ connection }) {
+  
   const knex = getKnex(connection)
 
   const { schema } = connection
