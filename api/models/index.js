@@ -8,6 +8,8 @@ const { getKnex } = require('./util')
 const { getPlatformEnvData } = require('../redis')
 const { mergeFunctionName } = require('../database')
 
+const PROD = process.env.NODE_ENV === 'production'
+
 const models = {
   ApiKey: require('./ApiKey'),
   Assessment: require('./Assessment'),
@@ -104,7 +106,8 @@ async function getConnection ({ platformId, env } = {}) {
       password: postgresqlData.password,
       database: postgresqlData.database,
       port: postgresqlData.port,
-      schema: postgresqlData.schema
+      schema: postgresqlData.schema,
+      ssl: PROD ? 'prefer' : false,
     }
     schema = postgresqlData.schema
   } else {
@@ -114,7 +117,9 @@ async function getConnection ({ platformId, env } = {}) {
       password: process.env.POSTGRES_PASSWORD,
       database: process.env.POSTGRES_DB,
       port: process.env.POSTGRES_PORT,
-      schema: 'public'
+      schema: 'public',
+      ssl: PROD ? 'prefer' : false,
+
     }
     schema = 'public'
   }

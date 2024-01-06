@@ -1,5 +1,7 @@
 const Knex = require('knex')
 
+const PROD = process.env.NODE_ENV === 'production'
+
 const knexInstances = {}
 
 function getKnex (connection = {}, options = {}) {
@@ -28,7 +30,8 @@ function getKnex (connection = {}, options = {}) {
       user,
       password,
       database,
-      port
+      port,
+      ssl: PROD ? 'prefer' : false,
     },
     pool
   })
